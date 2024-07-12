@@ -1,0 +1,38 @@
+.button1 {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.button2 {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.button3 {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.button4 {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.button5 {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+button {
+    position: absolute;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}

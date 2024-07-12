@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.menu {
+    position: static;
+    width: 200px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    vertical-align: bottom;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.homeButton {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 30px;
+}
+
+.homeButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.homeButton:active {
+    background-color: #004494;
+    transform: scale(1);
+}
+
+.button-menu {
+    display: inline-block;
+    background-color: #5c5d5e;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: #ffffff !important;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button-menu:hover {
+    background-color: #007BFF;
+    transform: scale(1.05);
+}
+
+.button-menu:active {
+    background-color: #007BFF;
+    transform: scale(1);
+}
