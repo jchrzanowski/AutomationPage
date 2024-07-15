@@ -24,15 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (button1 && imageContainer1) {
         button1.addEventListener('click', () => {
-            imageContainer1.classList.remove('hidden');
-            imageContainer2.classList.add('hidden');
+            if (imageContainer1.classList.contains('hidden')) {
+                imageContainer1.classList.remove('hidden');
+                imageContainer2.classList.add('hidden');
+            } else {
+                imageContainer1.classList.add('hidden');
+            }
         });
     }
 
     if (button2 && imageContainer2) {
         button2.addEventListener('click', () => {
-            imageContainer2.classList.remove('hidden');
-            imageContainer1.classList.add('hidden');
+            if (imageContainer2.classList.contains('hidden')) {
+                imageContainer2.classList.remove('hidden');
+                imageContainer1.classList.add('hidden');
+            } else {
+                imageContainer2.classList.add('hidden');
+            }
         });
     }
 
@@ -43,3 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
