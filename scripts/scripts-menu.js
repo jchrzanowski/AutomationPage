@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a class="button-menu" href="exercise2.html">Exercise 2</a></li>
                 <li><a class="button-menu" href="exercise3.html">Exercise 3</a></li>
                 <li><a class="button-menu" href="exercise4.html">Exercise 4</a></li>
+                <li><a class="button-menu" href="exercise5.html">Exercise 5</a></li>
+                <li><a class="button-menu" href="exercise6.html">Exercise 6</a></li>
             </ul>
         </div>
     `;
