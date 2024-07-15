@@ -1,5 +1,10 @@
+/* Global CSS settings */
+
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
@@ -13,9 +18,90 @@ h1 {
     margin-top: 0;
 }
 
-.buttons {
+/* MENU page nav */
+
+.menu {
+    position: static;
+    width: 200px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    vertical-align: bottom;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.homeButton {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 30px;
+}
+
+.homeButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.homeButton:active {
+    background-color: #004494;
+    transform: scale(1);
+}
+
+.button-menu {
+    display: inline-block;
+    background-color: #5c5d5e;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: #ffffff !important;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button-menu:hover {
+    background-color: #007BFF;
+    transform: scale(1.05);
+}
+
+.button-menu:active {
+    background-color: #007BFF;
+    transform: scale(1);
+}
+
+/* Ex 1, buttons with image and link */
+
+.image-buttons {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .round-button {
@@ -32,6 +118,7 @@ h1 {
     justify-content: center;
     text-align: center;
     text-decoration: none;
+    position: relative;
 }
 
 .round-button:hover {
@@ -42,6 +129,7 @@ h1 {
     display: none;
 }
 
+/* Ex 1, images containers */
 #imageContainer img,
 #imageContainer2 img {
     margin-top: 20px;
@@ -49,19 +137,23 @@ h1 {
     height: 200px;
 }
 
+/* ex 2, login page */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
 }
 
 .login-form label {
     font-weight: bold;
+    position: relative;
 }
 
 .login-form input {
     padding: 8px;
     font-size: 14px;
+    position: relative;
 }
 
 .login-form button {
@@ -71,9 +163,125 @@ h1 {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    position: relative;
 }
 
 .login-form button:hover {
     background-color: #0056b3;
 }
 
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+
+
+/* Ex 3, Calculator */
+
+.calculator {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px;
+    position: static;
+}
+
+#calculator-display {
+    width: 100%;
+    height: 40px;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    position: relative;
+}
+
+.calc-button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.calc-button:disabled {
+    background-color: #e0e0e0;
+    cursor: default;
+    position: relative;
+}
+
+.calc-button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.calc-button:active:not(:disabled) {
+    background-color: #d0d0d0;
+    position: relative;
+}
+
+/* Ex 4, Random Buttons */
+.button1 {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.button2 {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.button3 {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.button4 {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.button5 {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.button1,
+.button2,
+.button3,
+.button4,
+.button5 {
+    position: absolute;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+    width: 300px;
+    height: 150px;
+}
+
+.button1:hover,
+.button2:hover,
+.button3:hover,
+.button4:hover,
+.button5:hover {
+    transform: scale(1.1);
+}

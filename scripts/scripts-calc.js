@@ -12,6 +12,7 @@ const buttonsContainer = document.getElementById('buttons');
 buttons.forEach(button => {
     const buttonElement = document.createElement('button');
     buttonElement.textContent = button;
+    buttonElement.classList.add('calc-button');
     if (button === '') {
         buttonElement.disabled = true;
     } else {
@@ -21,7 +22,7 @@ buttons.forEach(button => {
 });
 
 function handleButtonClick(value) {
-    const display = document.getElementById('display');
+    const display = document.getElementById('calculator-display');
     const currentValue = display.value;
 
     if (currentValue === '' && (value === '*' || value === '/' || value === '.' || value === '=' || value === '←')) {
@@ -45,20 +46,20 @@ function handleButtonClick(value) {
 }
 
 function appendToDisplay(value) {
-    document.getElementById('display').value += value;
+    document.getElementById('calculator-display').value += value;
 }
 
 function clearDisplay() {
-    document.getElementById('display').value = '';
+    document.getElementById('calculator-display').value = '';
 }
 
 function deleteLast() {
-    var display = document.getElementById('display');
+    var display = document.getElementById('calculator-display');
     display.value = display.value.slice(0, -1);
 }
 
 function calculateResult() {
-    var display = document.getElementById('display');
+    var display = document.getElementById('calculator-display');
     try {
         display.value = eval(display.value);
     } catch (e) {
