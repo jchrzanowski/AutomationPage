@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script defer src="../scripts/scripts-menu.js"></script>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="loginPopup">
+        <h2>Zaloguj się</h2>
+        <label for="username">Login:</label>
+        <input type="text" id="username"><br><br>
+        <label for="password">Hasło:</label>
+        <input type="password" id="password"><br><br>
+        <button onclick="login()">Zaloguj się</button>
+    </div>
+
+    <div class="hidden-content" id="content">
+        <h1>Witamy na stronie!</h1>
+        <p>To jest ukryta treść dostępna tylko po zalogowaniu.</p>
+    </div>
+
+    <script>
+        // Pokazanie popupu logowania po załadowaniu strony
+        window.onload = function () {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('loginPopup').style.display = 'block';
+        }
+
+        // Funkcja do logowania
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Walidacja danych logowania
+            if (username === 'admin' && password === 'admin') {
+                document.getElementById('loginPopup').style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('Nieprawidłowy login lub hasło');
+            }
+        }
+    </script>
+</body>
+
+</html>
